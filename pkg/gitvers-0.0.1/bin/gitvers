@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# Simple gem auto versioning with git
+
+class GitVers
+    
+    `git log --pretty=oneline -i --grep=^release -1`
+    
+    
+    
+end # class GitVers
