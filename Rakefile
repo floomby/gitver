@@ -11,7 +11,6 @@ spec = Gem::Specification.new do |gem|
     gem.summary      = "Ruby gem integration with git"
     gem.description  = "Does versioning, releasing and testing of rubygems with git"
     
-    gem.require_path = "lib"
     gem.files        = `git ls-files`.split($\)
     
     gem.executables  = ["gitvers"]

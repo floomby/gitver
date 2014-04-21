@@ -6,6 +6,26 @@ class GitVers
     
     `git log --pretty=oneline -i --grep=^release -1`
     
+
+    def self.install
+        
+    end
+    
+    def self.version
+        a = /^[^ ]+ ([^ ]+)$/.match `git log --pretty=oneline -i --grep=^release -1`
+        puts a[1] if a
+    end
     
     
 end # class GitVers
+
+abort "Usage: gitvers <install|version>\n" unless ARGV.length == 1
+
+case ARGV[0]
+when 'install'
+    GitVers.install
+when 'version'
+    GitVers.version
+else
+    abort "Usage: gitvers <install|version>\n"
+end
