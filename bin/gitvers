@@ -11,7 +11,11 @@ class GitVers
     # get the last release
     def self.version
         a = /^[^ ]+ [^ ]+ ([^ ]+)$/.match `git log --oneline -i --grep=^release -1`
-        puts a[1] if a
+        if a
+            puts a[1]
+        else
+            exit 1
+        end
     end
     
     

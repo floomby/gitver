@@ -1,3 +1,5 @@
+# Created by GitVers - Fill the commented stuff out yourself
+
 require 'rubygems'
 require 'rubygems/package_task'
 
@@ -7,13 +9,13 @@ spec = Gem::Specification.new do |gem|
     
     gem.author       = `git config --get user.name`
     gem.email        = `git config --get user.email`
-    gem.homepage     = "https://github.com/floomby/gitvers.git"
-    gem.summary      = "Ruby gem integration with git"
-    gem.description  = "Does versioning, releasing and testing of rubygems with git"
+    #gem.homepage     = "https://github.com/zerocool/gibsonizer_gem.git"
+    #gem.summary      = "Hacks the Gibson"
+    #gem.description  = "A Super-Duper Gem Description"
     
     gem.files        = `git ls-files`.split($\)
     
-    gem.executables  = ["gitvers"]
+    #gem.executables  = ["gibsonizer"]
 end
 
 Gem::PackageTask.new(spec) do |pkg|
