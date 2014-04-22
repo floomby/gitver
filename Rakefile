@@ -1,8 +1,9 @@
 require 'rubygems'
 require 'rubygems/package_task'
+require 'pathname'
 
 spec = Gem::Specification.new do |gem|
-    gem.name         = "gitvers"
+    gem.name         = Pathname.new(`git rev-parse --show-toplevel`).basename
     gem.version      = "0.0.1"
     
     gem.author       = "Josh Hoover"
