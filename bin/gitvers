@@ -5,7 +5,7 @@
 class GitVers
     
     def self.install
-        
+        `wget `
     end
     
     # get the last release
