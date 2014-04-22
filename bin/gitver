@@ -2,10 +2,10 @@
 
 # Simple gem auto versioning with git
 
-class GitVers
+class GitVer
     
     def self.install
-        `wget https://raw.githubusercontent.com/floomby/gitvers/master/templates/Rakefile`
+        `wget https://raw.githubusercontent.com/floomby/gitver/master/templates/Rakefile`
     end
     
     # get the last release
@@ -19,15 +19,15 @@ class GitVers
     end
     
     
-end # class GitVers
+end # class GitVer
 
-abort "Usage: gitvers <install|version>\n" unless ARGV.length == 1
+abort "Usage: gitver <install|version>\n" unless ARGV.length == 1
 
 case ARGV[0]
 when 'install'
-    GitVers.install
+    GitVer.install
 when 'version'
-    GitVers.version
+    GitVer.version
 else
-    abort "Usage: gitvers <install|version>\n"
+    abort "Usage: gitver <install|version>\n"
 end

@@ -1,5 +1,5 @@
-GitVers - Ruby Gem Auto Versioning
-==================================
+GitVer - Ruby Gem Auto Versioning
+=================================
 
 Usage
 -----
@@ -13,7 +13,7 @@ to make a ruby gem I do the following.
 ```
 git clone https://github.com/floomby/gemness.git
 cd gemness
-gitvers install
+gitver install
 ```
  * Then edit the Rakefile to suit you needs
  * Code your gem
