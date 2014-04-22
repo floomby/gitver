@@ -4,7 +4,7 @@ require 'rubygems'
 require 'rubygems/package_task'
 
 spec = Gem::Specification.new do |gem|
-    gem.name         = File.basename(`git rev-parse --show-toplevel`)
+    gem.name         = File.basename(`git rev-parse --show-toplevel`).chop
     gem.version      = `gitvers version`
     
     gem.author       = `git config --get user.name`
