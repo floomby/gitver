@@ -2,10 +2,20 @@
 
 # Simple gem auto versioning with git
 
+require 'net/http'
+
 class GitVer
     
     def self.install
-        `wget https://raw.githubusercontent.com/floomby/gitver/master/templates/Rakefile`
+        File.open 'Rakefile', 'w' do |f|
+            uri = URI.parse 'https://raw.githubusercontent.com/floomby/gitver/master/templates/Rakefile'
+            http = Net::HTTP.new uri.host, uri.port
+            http.use_ssl = true
+            
+            req = Net::HTTP::Get.new uri.request_uri
+                        
+            f.write (http.request req).body
+        end
     end
     
     # get the last release
