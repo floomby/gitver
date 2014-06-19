@@ -9,7 +9,7 @@ spec = Gem::Specification.new do |gem|
     
     gem.author       = `git config --get user.name`
     gem.email        = `git config --get user.email`
-    #gem.homepage     = "https://github.com/zerocool/gibsonizer_gem.git"
+    #gem.homepage     = "https://github.com/zerocool/gibsonizer_gem"
     #gem.summary      = "Hacks the Gibson"
     #gem.description  = "A Super-Duper Gem Description"
     
