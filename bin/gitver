@@ -16,6 +16,15 @@ class GitVer
                         
             f.write (http.request req).body
         end
+        begin
+            (File.readlines '.gitignore').each do |line|
+                if line.match /^\W*\/pkg\W*$/
+                    return
+                end
+            end
+        rescue
+        end
+        File.open('.gitignore', 'a'){ |f| f.write '/pkg' }
     end
     
     # get the last release
